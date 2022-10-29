@@ -50,3 +50,11 @@ For 9999999 iterations:
 - `crypto.randomInt` is faster but in the same order (1/10) apparently (9999999 iterations)
 - No memory blow or overflow apparently
 - It doesn't seem to converge to a value
+
+## Contribution
+
+RandomGen in the browser is so weak!
+
+It only runs with a server. You can use <a href="https://www.npmjs.com/package/serve">Serve</a>
+
+Open the 'console/performance' then 'record' then press F5. Finally come back with some imprevements on the Github issues :) 
