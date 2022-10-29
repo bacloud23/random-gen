@@ -24,3 +24,29 @@ const rand2 = lib.generate()
 console.log(rand2) // 14861
 t.true(rand2 > 0)
 ```
+
+## Benchmarks
+
+    stress test (no overflows in constructor ?)
+    Execution time (hr): 5s 77.9351ms
+    -----------------------
+
+    stress test (no overflows in methods?)
+    Execution time (hr): 7s 996.0777ms
+    -----------------------
+
+    stress test versus Math.random
+    Execution time (hr): 0s 71.0504ms
+    -----------------------
+
+    stress test versus crypto.randomInt
+    Execution time (hr): 0s 125.3639ms
+
+### Results
+
+For 9999999 iterations:
+
+- `Math.random` is the fastest
+- `crypto.randomInt` is faster but in the same order (1/10) apparently (9999999 iterations)
+- No memory blow or overflow apparently
+- It doesn't seem to converge to a value

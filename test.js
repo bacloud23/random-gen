@@ -10,3 +10,4 @@ test("Random number is positive", (t) => {
     console.log(rand2)
     t.true(rand2 > 0)
 });
+

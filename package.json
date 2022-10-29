@@ -1,5 +1,5 @@
 {
-  "name": "random-gen",
+  "name": "@bacloud22/random-gen",
   "version": "1.0.0",
   "description": "random number generator based on time",
   "main": "index.js",
