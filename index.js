@@ -1,10 +1,14 @@
 function RandomGen() {
-
     const HARD_LIMIT = 999999
     const MAX_SHIFT = 3
     // Might evolve
     // Although process.hrtime.bigint is the new one, the other is faster
     // const atomicRandom = () => Number(process.hrtime.bigint()) / 100
+    function precision(a) {
+        var e = 1;
+        while (Math.round(a * e) / e !== a) e *= 10;
+        return Math.log(e) / Math.LN10;
+    }
 
     function atomicRandomGenerator() {
         if (typeof process === 'object')
@@ -12,7 +16,9 @@ function RandomGen() {
         if (typeof window === 'object' && performance) {
             this.value = () => {
                 const now = performance.now()
-                return ~~now + Math.abs(~~(now * 1000000))
+                const decimals = precision(now)
+                if (decimals) return ~~now + Math.abs(~~(now * Math.pow(10, decimals)))
+                else return now
             }
             console.warn('RandomGen in the browser is so weak')
         }
