@@ -1,0 +1,30 @@
+{
+  "name": "random-gen",
+  "version": "1.0.0",
+  "description": "random number generator based on time",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bacloud23/random-gen.git"
+  },
+  "keywords": [
+    "random",
+    "generator",
+    "nodejs",
+    "node",
+    "javascript"
+  ],
+  "author": "B.A. bacloud\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C[at]\u001b[D\u001b[D\u001b[D\u001b[D14[at]gmail (dot)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bacloud23/random-gen/issues"
+  },
+  "homepage": "https://github.com/bacloud23/random-gen#readme",
+  "devDependencies": {
+    "ava": "^5.0.1"
+  }
+}
