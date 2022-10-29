@@ -1,6 +1,6 @@
 {
   "name": "@bacloud22/random-gen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "random number generator based on time",
   "main": "index.js",
   "type": "module",
@@ -18,7 +18,7 @@
     "node",
     "javascript"
   ],
-  "author": "B.A. bacloud\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C[at]\u001b[D\u001b[D\u001b[D\u001b[D14[at]gmail (dot)",
+  "author": "B.A. bacloud14[at]gmail (dot)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bacloud23/random-gen/issues"
