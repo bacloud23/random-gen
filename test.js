@@ -6,4 +6,7 @@ test("Random number is positive", (t) => {
     const rand1 = lib.generate()
     console.log(rand1)
     t.true(rand1 > 0)
+    const rand2 = lib.generate()
+    console.log(rand2)
+    t.true(rand2 > 0)
 });
