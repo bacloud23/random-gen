@@ -1,6 +1,8 @@
 function RandomGen() {
     const HARD_LIMIT = 999999
     const MAX_SHIFT = 3
+    const FIRST_SEED = 10
+
     // Might evolve
     // Although process.hrtime.bigint is the new one, the other is faster
     // const atomicRandom = () => Number(process.hrtime.bigint()) / 100
@@ -42,7 +44,9 @@ function RandomGen() {
     this.randoms = new Array(128).fill(0)
     // Circular 0-128
     this.index = new Int8Array(1).fill(0)
-    this.randoms[Math.abs(this.index[0]++)] = atomicRandom.value()
+    for (let i = 0; i < FIRST_SEED; i++) {
+        this.randoms[Math.abs(this.index[0]++)] = atomicRandom.value()
+    }
 
     /**
      * Does the whole job of generating new numbers
@@ -54,16 +58,8 @@ function RandomGen() {
         return (rand % HARD_LIMIT) << indexRandom(MAX_SHIFT);
     };
 
-    /**
-     * 
-     * @param {*} val 
-     * @returns 
-     */
-    this.method = (val) => {
-        return val
-    };
 }
 /**
- * 
+ * To instanciate the library: new RandomGen()
  */
 export default RandomGen;

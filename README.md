@@ -4,7 +4,9 @@ This is an experiment. I do not pretend it is well secure. **This is a work in p
 
 ## Description
 
-Many methods are used to generate pseudo-random values. **Random-gen** gets the *current time* eagerly on occasions (bootstrap, instanciating the basic class with *new* etc) and then generates a random number on demand again with a second *current time*.
+Many methods are used to generate pseudo-random values. **Random-gen** gets the *current time* opportunistically on occasions (bootstrap, instanciating the basic class with *new* etc) and then generates a random number on demand again with a second *current time*.
+
+`Math.random` generates a random number with the current time as a source as well; But **Random-gen** has a small memory of previously generated values, which are used again to generate a new one. This might be seen as a flaw, but in a secure system it is not.
 
 ## Why and how
 
